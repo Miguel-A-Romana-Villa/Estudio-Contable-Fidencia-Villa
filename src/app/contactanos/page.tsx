@@ -28,9 +28,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-16">
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <aside className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+      <section className="mx-auto max-w-7xl overflow-hidden px-5 py-16">
+        <div className="grid min-w-0 gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <aside className="min-w-0 overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
             <div>
                 <p className="font-semibold text-brand-primary">WhatsApp / Telefono</p>
                 <p className="mt-2 text-lg text-slate-700">{siteConfig.phone}</p>
@@ -58,16 +58,14 @@ export default function ContactPage() {
 
         <div className="mt-12 rounded-xl bg-brand-soft p-6">
           <p className="font-semibold text-brand-primary">Mapa</p>
-          <div className="mt-4 overflow-hidden rounded-lg">
+          <div className="mt-4 min-w-0 overflow-hidden rounded-lg">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d956.5622472891109!2d-71.49259206560029!3d-16.462925319692495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1782975074278!5m2!1ses-419!2spe"
-              width="600"
-              height="450"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
-              className="h-[28rem] w-full"
+              className="block h-[28rem] w-full max-w-full"
             />
           </div>
         </div>

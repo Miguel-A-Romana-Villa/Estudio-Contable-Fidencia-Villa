@@ -172,9 +172,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contacto" className="bg-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 lg:grid-cols-2 lg:items-center">
-          <div>
+      <section id="contacto" className="overflow-hidden bg-white">
+        <div className="mx-auto grid max-w-7xl min-w-0 gap-8 px-5 py-16 lg:grid-cols-2 lg:items-center">
+          <div className="min-w-0">
             <p className="font-semibold uppercase tracking-[0.18em] text-brand-primary">Contactanos</p>
             <h2 className="mt-3 text-3xl font-bold">Conversemos sobre tu empresa</h2>
             <p className="mt-4 text-lg leading-8 text-slate-600">

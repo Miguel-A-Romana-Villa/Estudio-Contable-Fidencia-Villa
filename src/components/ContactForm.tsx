@@ -11,17 +11,17 @@ type ContactFormProps = {
 type SubmitStatus = "idle" | "loading" | "success" | "error";
 
 const baseInputClass =
-  "rounded-lg border px-4 py-3 outline-none transition focus:border-brand-primary";
+  "w-full min-w-0 rounded-lg border px-4 py-3 outline-none transition focus:border-brand-primary";
 
 const variants = {
   home: {
-    form: "rounded-2xl border border-white/25 bg-white/30 p-6 shadow-xl shadow-black/10 ring-1 ring-white/20 backdrop-blur-md",
+    form: "w-full min-w-0 rounded-2xl border border-white/25 bg-white/30 p-6 shadow-xl shadow-black/10 ring-1 ring-white/20 backdrop-blur-md",
     input:
       "border-slate-200 bg-white text-slate-800 placeholder:text-slate-500",
     text: "text-slate-700",
   },
   contact: {
-    form: "rounded-2xl border border-white/25 bg-white/30 p-7 shadow-xl shadow-black/10 backdrop-blur-md ring-1 ring-white/20",
+    form: "w-full min-w-0 rounded-2xl border border-white/25 bg-white/30 p-7 shadow-xl shadow-black/10 backdrop-blur-md ring-1 ring-white/20",
     input:
       "border-white/40 bg-white/70 text-slate-800 placeholder:text-slate-500",
     text: "text-slate-700",
@@ -80,7 +80,7 @@ export function ContactForm({ variant = "home" }: ContactFormProps) {
         </>
       ) : null}
 
-      <div className={variant === "contact" ? "mt-6 grid gap-4" : "grid gap-4"}>
+      <div className={variant === "contact" ? "mt-6 grid min-w-0 gap-4" : "grid min-w-0 gap-4"}>
         <input
           name="nombre"
           className={`${baseInputClass} ${styles.input}`}
@@ -93,7 +93,7 @@ export function ContactForm({ variant = "home" }: ContactFormProps) {
           placeholder="Empresa"
         />
         {variant === "contact" ? (
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid min-w-0 gap-4 sm:grid-cols-2">
             <input
               name="telefono"
               className={`${baseInputClass} ${styles.input}`}
