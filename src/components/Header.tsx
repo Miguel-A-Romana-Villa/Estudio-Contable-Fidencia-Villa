@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { getWhatsAppUrl, siteConfig } from "@/data/site";
+import { getWhatsAppUrl } from "@/data/site";
 
 const navItems = [
   { href: "/", label: "Inicio" },
@@ -59,25 +59,26 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 overflow-visible border-b border-white/10 bg-brand-primary-dark/95 text-white backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-5 lg:gap-6">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-2 px-3 sm:px-5 lg:gap-6">
         <Link
           href="/"
-          className="relative flex min-w-0 items-center gap-4 overflow-visible sm:gap-6"
+          className="relative flex min-w-0 flex-1 items-center gap-2 overflow-visible sm:gap-6 lg:flex-none"
           onClick={() => setMenuOpen(false)}
         >
-          <span className="relative block h-12 w-20 shrink-0 overflow-visible sm:w-24">
+          <span className="relative block h-12 w-[4.6rem] shrink-0 overflow-visible sm:w-24">
             <Image
               src="/icono.png"
               alt="Logo del Estudio Contable Fidencia Villa"
               width={517}
               height={483}
               sizes="132px"
-              className="absolute left-0 top-1/2 z-10 h-auto w-[132px] max-w-none -translate-y-1/2 object-contain"
+              className="absolute -left-1 top-1/2 z-10 h-auto w-[112px] max-w-none -translate-y-1/2 object-contain sm:left-0 sm:w-[132px]"
               priority
             />
           </span>
-          <span className="truncate text-xs font-semibold uppercase tracking-[0.14em] sm:text-base sm:tracking-[0.18em]">
-            {siteConfig.name}
+          <span className="absolute left-[5.25rem] right-0 min-w-0 text-center text-[0.76rem] font-semibold uppercase leading-tight tracking-[0.085em] sm:static sm:text-left sm:text-base sm:tracking-[0.18em]">
+            <span className="block sm:inline">Estudio Contable</span>
+            <span className="block sm:inline"> Fidencia Villa</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-medium lg:flex xl:gap-6 xl:text-md">
