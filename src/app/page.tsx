@@ -86,8 +86,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="nosotros" className="relative z-10 overflow-hidden bg-[url('/inicio/flores.png')] bg-cover bg-center shadow-[0_-28px_60px_rgba(0,0,0,0.35),0_28px_70px_rgba(0,0,0,0.45)]">
+      <section id="nosotros" className="relative z-10 overflow-hidden bg-[url('/inicio/flores.png')] bg-cover bg-center">
         <div className="absolute inset-0 bg-brand-primary-dark/80"/>
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-12 bg-gradient-to-b from-black/35 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-12 bg-gradient-to-t from-black/45 to-transparent" />
         <div className="relative z-10">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="grid gap-6 rounded-2xl border border-white/25 bg-white/20 p-8 shadow-xl shadow-black/20 ring-1 ring-white/20 backdrop-blur-md md:grid-cols-[1fr_170px] md:items-center">
